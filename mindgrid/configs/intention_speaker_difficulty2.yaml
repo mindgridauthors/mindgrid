@@ -1,0 +1,26 @@
+principal:
+  query_source: openai
+  model_source: gpt
+  basic_reward_functions:
+    - { name: "reward_carry_object_hof" }
+  basic_reward_weights:
+    - 1
+  skills: ['pickup_red_key', 'put_down_red_key', 'pickup_grey_key', 'unlock_grey_door', 'put_down_grey_key', 'pickup_brown_ball']
+
+attendant:
+  query_source: openai
+  model_source: gpt
+  basic_reward_functions:
+    - { name: "reward_carry_object_hof" }
+  basic_reward_weights:
+    - 1
+  skills: ['go_to_brown_bridge', 'go_to_brown_box', 'pickup_green_ball', 'move_right_3_steps', 'move_forward_2_steps']
+
+env_specs:
+  task: PICKUP
+  principal_level: TREASURE_ISLAND
+  seed: 8
+  # principal_render_mode: human
+  # attendant_render_mode: human
+  principal_setup_actions: [0, 1]
+  attendant_setup_actions: [0, 1]
