@@ -5,7 +5,7 @@ We present MindGrid, a research toolkit for studying practical alignment in huma
 ## Installation
 Clone the repository.
 ```
-git clone ...
+git clone https://github.com/mindgridauthors/mindgrid.git
 ```
 Create a new conda environment and install dependencies.
 ```
@@ -34,7 +34,7 @@ env.render()
 ```
 
 ## Datasets
-Inside `datasets/` are the four {environment mismatch, skillset mismatch} x {games, datapoints} datasets, complete with five training, validation, and testing splits. Unzip the `.zip` files to get the corresponding `pickle` files. Here is a quick example that shows how to load them and what they contain.
+Inside `datasets/` are the four {environment mismatch, skillset mismatch} x {games, datapoints} datasets, complete with five training, validation, and testing splits. Unzip the `.zip` files to get the corresponding `pickle` files. Once you have them, here is a quick example that shows how to load them and what they contain.
 ```
 >>> import pickle
 >>> with open("datasets/skillset_mismatch_datapoints.pickle", "rb") as f:
